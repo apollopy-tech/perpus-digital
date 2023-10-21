@@ -207,7 +207,7 @@ table {
     text-align: center;
     font-family: 'Charm';
     letter-spacing: 2px;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 25px;
