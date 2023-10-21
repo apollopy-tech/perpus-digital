@@ -3,8 +3,8 @@
         <div class="nav-container">
             <img src="@/assets/images/companylogo.png" class="company"/>
             <div class="headerText">
-                <h1>PERPUSTAKAAN DIGITAL</h1>
-                <h4>SMK NEGERI 4 TASIKMALAYA</h4>
+                <h1>Perpustakaan Digital</h1>
+                <h4>SMK Negeri 4 Tasikmalaya</h4>
             </div>
             <img src="@/assets/images/perpusnasional.png" class="perpusnasional"/>
             <img src="@/assets/images/logosmk.png" class="smk"/>
@@ -18,9 +18,12 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Italianno&display=swap');
 
 *{
 margin: 0;
+z-index: 1;
 }
 .nav-container {
     background-color:#413304;
@@ -47,30 +50,32 @@ margin: 0;
 .smk{
     width: 111.077px;
     height: 126px;
-    padding: 20px;
+    padding: 13px;
+
 }
 .headerText {
     color: #EFDE79;
     text-align: center;
     font-family: '';
-    font-size: 20px;
-    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 9px;
+    font-style: 'bold';
     font-weight: 50;
     line-height: normal;
     display: flex;;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Bungee', sans-serif;
+    font-family: 'italianno', cursive;
+
 }
 
 h4{
-    color: #FFF;
+    color: #fff9c2;
     text-align: center;
-    font-family: 'Bungee';
+    font-family: 'Charm', cursive;
     font-size: 20px;
-    font-style: normal;
-    font-weight: 50;
-    line-height: normal;
+    font-style: 'bold';
+    font-weight: 60;
 }
 </style>
