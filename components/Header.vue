@@ -31,6 +31,7 @@ z-index: 1;
     height: 150px;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -39,8 +40,7 @@ z-index: 1;
 
 .company {
     width: 257.178px;
-    height: 89px;
-    padding: 30px;
+    height: 90px;
 }
 
 .perpusnasional{
@@ -50,22 +50,16 @@ z-index: 1;
 .smk{
     width: 111.077px;
     height: 126px;
-    padding: 13px;
 
 }
-.headerText {
+h1 {
     color: #EFDE79;
     text-align: center;
     font-family: '';
-    font-size: 30px;
+    font-size: 55px;
     letter-spacing: 9px;
-    font-style: 'bold';
     font-weight: 50;
     line-height: normal;
-    display: flex;;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     font-family: 'italianno', cursive;
 
 }
@@ -75,7 +69,58 @@ h4{
     text-align: center;
     font-family: 'Charm', cursive;
     font-size: 20px;
+    letter-spacing: 4px;
     font-style: 'bold';
     font-weight: 60;
+}
+
+@media (max-width: 520px) {
+    .nav-container {
+        background-color:#413304;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .company {
+        width: 100.178px;
+        height:30px;
+    }
+    
+    .perpusnasional{
+        width: 60.104px;
+        height: 59px;
+    }
+    .smk{
+        width: 46.077px;
+        height: 50px;
+    
+    }
+    h1 {
+        color: #EFDE79;
+        text-align: center;
+        font-family: '';
+        font-size: 26px;
+        letter-spacing: 4px;
+        font-style: 'bold';
+        font-family: 'italianno', cursive;
+    
+    }
+    
+    h4{
+        color: #fff9c2;
+        text-align: center;
+        font-family: 'Charm', cursive;
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-style: 'bold';
+        font-weight: 60;
+    }
 }
 </style>
