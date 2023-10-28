@@ -123,4 +123,53 @@ h4{
         font-weight: 60;
     }
 }
+@media (max-width: 820px) {
+    .nav-container {
+        background-color:#413304;
+        width: 100%;
+        height: 130px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .company {
+        width: 160.178px;
+        height:50px;
+    }
+    
+    .perpusnasional{
+        width: 100.104px;
+        height: 90px;
+    }
+    .smk{
+        width: 80.077px;
+        height: 80px;
+    
+    }
+    h1 {
+        color: #EFDE79;
+        text-align: center;
+        font-family: '';
+        font-size: 45px;
+        letter-spacing: 4px;
+        font-style: 'bold';
+        font-family: 'italianno', cursive;
+    
+    }
+    
+    h4{
+        color: #fff9c2;
+        text-align: center;
+        font-family: 'Charm', cursive;
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-style: 'bold';
+        font-weight: 60;
+    }
+}
 </style>

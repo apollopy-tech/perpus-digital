@@ -207,6 +207,7 @@ form {
 thead {
     border: 2px solid #A59663;
     color: #655602;
+    height: 50px;
     font-size: 22px;
     background-color: #ecdf87;
 }
