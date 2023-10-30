@@ -25,14 +25,16 @@
     <!--Showing Data Tables-->
     <div class="showData">
         <h1>Riwayat Pengunjung</h1>
-        <table class="table-responsive">
-            <thead>
-                <tr>
-                    <th class="no">No</th>
-                    <th class="nama">Nama</th>
-                    <th class="kategori">Kategori</th>
-                    <th class="keperluan">Keperluan</th>
-                    <th class="tanggal">Tanggal</th>
+        <div class="table-responsive">
+            <div class="m-2">Menampilkan {{ datas.length }} data</div>
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th class="no">No</th>
+                        <th class="nama">Nama</th>
+                        <th class="kategori">Kategori</th>
+                        <th class="keperluan">Keperluan</th>
+                        <th class="tanggal">Tanggal</th>
                 </tr>
             </thead>
             <tbody v-for="(anggota, index) in datas" :key="anggota.id ">
@@ -43,6 +45,7 @@
                 <td>{{ anggota.tanggal }}</td>
             </tbody>
         </table>
+    </div>
     </div>
 </template>
 
@@ -56,12 +59,14 @@ const datas = ref([])
 
 // Get Data From DataBase
 async function getData() {
+    
     const { data, error } = await supabase
     .from("anggota")
     .select()
+    .order('tanggal', { ascending: false })
     if (error) throw error
     if (data) {
-        console.log(data)
+        // console.log(data)
         datas.value = data
     } 
 }
