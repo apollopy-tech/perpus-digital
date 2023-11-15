@@ -17,9 +17,8 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Jomhuria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Chau+Philomene+One&family=Jomhuria&display=swap');
 
 *{
 margin: 0;
@@ -56,18 +55,18 @@ h1 {
     color: #EFDE79;
     text-align: center;
     font-family: '';
-    font-size: 55px;
+    font-size: 100px;
     letter-spacing: 9px;
-    font-weight: 50;
+    font-weight: 80px;
     line-height: normal;
-    font-family: 'italianno', cursive;
+    font-family: 'Jomhuria', serif;
 
 }
 
 h4{
     color: #fff9c2;
     text-align: center;
-    font-family: 'Charm', cursive;
+    font-family: 'Chau Philomene One', sans-serif;
     font-size: 20px;
     letter-spacing: 4px;
     font-style: 'bold';
@@ -109,14 +108,14 @@ h4{
         font-size: 26px;
         letter-spacing: 4px;
         font-style: 'bold';
-        font-family: 'italianno', cursive;
+        font-family: 'Jomhuria', serif;
     
     }
     
     h4{
         color: #fff9c2;
         text-align: center;
-        font-family: 'Charm', cursive;
+        font-family: 'Chau Philomene One', sans-serif;
         font-size: 13px;
         letter-spacing: 2px;
         font-style: 'bold';
@@ -158,14 +157,14 @@ h4{
         font-size: 45px;
         letter-spacing: 4px;
         font-style: 'bold';
-        font-family: 'italianno', cursive;
+        font-family: 'Jomhuria', serif;
     
     }
     
     h4{
         color: #fff9c2;
         text-align: center;
-        font-family: 'Charm', cursive;
+        font-family: 'Chau Philomene One', sans-serif;
         font-size: 13px;
         letter-spacing: 2px;
         font-style: 'bold';
