@@ -92,9 +92,8 @@ async function addData(){
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Jomhuria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Chau+Philomene+One&family=Jomhuria&display=swap');
 
 /* Visitors Style */
 .content {
@@ -115,13 +114,15 @@ async function addData(){
 h3 {
     position: relative;
     text-shadow: 0px 4px 4px rgba(58, 54, 0, 0.25);
-    font-family: 'Italianno', cursive;
-    font-size: 70px;
+    font-family: 'Jomhuria', serif;
+    font-size: 80px;
+    line-height: 53px; 
     letter-spacing: 7px;
     overflow: hidden;
     background: linear-gradient(90deg, #7d6f24, #f6ff00, #EFDE79);
     background-repeat: no-repeat;
     background-size: 80%;
+    /* font-weight: 80px; */
     animation: animate 3.8s linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(94, 86, 36, 0);
@@ -146,7 +147,7 @@ h3 {
     border-style: hidden; 
     float: right;
     transform: rotate(-0.800deg);
-    font-family: 'Charm';
+    font-family: 'Chau Philomene One', sans-serif;
     transition: background-color ,color ,1s ease ;
     margin: 10px 30px ;
 }
@@ -167,7 +168,7 @@ form {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 50px;
     border-style: hidden;
-    font-family: 'Charm';
+    font-family: 'Chau Philomene One', sans-serif;
 }
 #kategori {
     width: 335px;
@@ -178,7 +179,7 @@ form {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 50px;
     border-style: hidden;
-    font-family: 'Charm';
+    font-family: 'Chau Philomene One', sans-serif;
 }
 #keperluan {
     width: 335px;
@@ -189,7 +190,7 @@ form {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 50px;
     border-style: hidden;
-    font-family: 'Charm';
+    font-family: 'Chau Philomene One', sans-serif;
 }
 /* End Visitor Style */
 
@@ -203,7 +204,7 @@ form {
 
 .table-responsive{
     border: 2px solid #A59663;
-    font-family: 'Charm', cursive;
+    font-family: 'Chau Philomene One', sans-serif;
     color: wheat;
     margin: 15px;
     letter-spacing: 3px;
@@ -213,7 +214,7 @@ thead {
     border: 2px solid #A59663;
     color: #655602;
     height: 50px;
-    font-size: 22px;
+    font-size: 20px;
     background-color: #ecdf87;
 }
 
@@ -224,10 +225,11 @@ tbody {
 h1{
     position: relative;
     text-shadow: 0px 4px 4px rgba(255, 246, 121, 0.25);
-    font-family: 'Italianno', cursive;
+    font-family: 'Jomhuria', serif;
     text-align: center;
-    font-size: 70px;
-    letter-spacing: 7px;
+    font-size: 80px;
+    line-height: 53px; 
+    letter-spacing: 10px;
     overflow: hidden;
     background: linear-gradient(85deg, #685b11, #f6ff00, #ffef96);
     background-repeat: no-repeat;
