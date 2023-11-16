@@ -1,14 +1,12 @@
 <template>
-    <div>
-        <div class="nav-container">
-            <img src="@/assets/images/companylogo.png" class="company"/>
-            <div class="headerText">
-                <h1>Perpustakaan Digital</h1>
-                <h4>SMK Negeri 4 Tasikmalaya</h4>
-            </div>
-            <img src="@/assets/images/perpusnasional.png" class="perpusnasional"/>
-            <img src="@/assets/images/logosmk.png" class="smk"/>
+    <div class="nav-container">
+        <img src="@/assets/images/companylogo.png" class="company"/>
+        <div class="headerText">
+            <h1>Perpustakaan Digital</h1>
+            <h4>SMK Negeri 4 Tasikmalaya</h4>
         </div>
+        <img src="@/assets/images/perpusnasional.png" class="perpusnasional"/>
+        <img src="@/assets/images/logosmk.png" class="smk"/>
     </div>
 </template>
 
@@ -31,7 +29,6 @@ z-index: 1;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
