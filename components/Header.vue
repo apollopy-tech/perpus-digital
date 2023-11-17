@@ -5,7 +5,6 @@
             <h1>Perpustakaan Digital</h1>
             <h4>SMK Negeri 4 Tasikmalaya</h4>
         </div>
-        <img src="@/assets/images/perpusnasional.png" class="perpusnasional"/>
         <img src="@/assets/images/logosmk.png" class="smk"/>
     </div>
 </template>
@@ -39,10 +38,6 @@ z-index: 1;
     height: 90px;
 }
 
-.perpusnasional{
-    width: 150.104px;
-    height: 152px;
-}
 .smk{
     width: 111.077px;
     height: 126px;
@@ -88,10 +83,6 @@ h4{
         height:30px;
     }
     
-    .perpusnasional{
-        width: 60.104px;
-        height: 59px;
-    }
     .smk{
         width: 46.077px;
         height: 50px;
@@ -137,11 +128,6 @@ h4{
         width: 160.178px;
         height:50px;
     }
-    
-    .perpusnasional{
-        width: 100.104px;
-        height: 90px;
-    }
     .smk{
         width: 80.077px;
         height: 80px;
@@ -186,11 +172,6 @@ h4{
     .company {
         width: 80.178px;
         height:30px;
-    }
-    
-    .perpusnasional{
-        width: 50.104px;
-        height: 40px;
     }
     .smk{
         width: 40.077px;
