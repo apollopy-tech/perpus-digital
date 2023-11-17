@@ -25,7 +25,7 @@ z-index: 1;
 .nav-container {
     background-color:#413304;
     width: 100%;
-    height: 150px;
+    height: 170px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -52,10 +52,9 @@ h1 {
     color: #EFDE79;
     text-align: center;
     font-family: '';
-    font-size: 100px;
+    font-size: 120px;
     letter-spacing: 9px;
-    font-weight: 80px;
-    line-height: normal;
+    line-height: 60px;
     font-family: 'Jomhuria', serif;
 
 }
@@ -64,7 +63,7 @@ h4{
     color: #fff9c2;
     text-align: center;
     font-family: 'Chau Philomene One', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     letter-spacing: 4px;
     font-style: 'bold';
     font-weight: 60;
@@ -101,7 +100,7 @@ h4{
     h1 {
         color: #EFDE79;
         text-align: center;
-        font-family: '';
+        line-height: 60px;
         font-size: 26px;
         letter-spacing: 4px;
         font-style: 'bold';
@@ -115,6 +114,7 @@ h4{
         font-family: 'Chau Philomene One', sans-serif;
         font-size: 13px;
         letter-spacing: 2px;
+        line-height: 60px;
         font-style: 'bold';
         font-weight: 60;
     }
@@ -150,7 +150,7 @@ h4{
     h1 {
         color: #EFDE79;
         text-align: center;
-        font-family: '';
+        line-height: 40px;
         font-size: 45px;
         letter-spacing: 4px;
         font-style: 'bold';
@@ -166,6 +166,55 @@ h4{
         letter-spacing: 2px;
         font-style: 'bold';
         font-weight: 60;
+        line-height: 40px;
+    }
+}
+@media (max-width: 450px) {
+    .nav-container {
+        background-color:#413304;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .company {
+        width: 80.178px;
+        height:30px;
+    }
+    
+    .perpusnasional{
+        width: 50.104px;
+        height: 40px;
+    }
+    .smk{
+        width: 40.077px;
+        height: 40px;
+    
+    }
+    h1 {
+        color: #EFDE79;
+        text-align: center;
+        line-height: 20px;
+        font-size: 40px;
+        letter-spacing: 4px;
+        font-family: 'Jomhuria', serif;
+    
+    }
+    
+    h4{
+        color: #fff9c2;
+        text-align: center;
+        font-family: 'Chau Philomene One', sans-serif;
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 20;
+        line-height: 20px;
     }
 }
 </style>

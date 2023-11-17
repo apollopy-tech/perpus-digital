@@ -1,76 +1,78 @@
 <template>
     <!--Input Data For DataBase-->
-    <div class="container-fluid content">
-        <div class="row justify-content-center">
-            <div class="col d-flex justify-content-center align-items-center">
-                <h3>Isi Data<br>Pengunjung</h3>
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <h3>Isi Data<br>Pengunjung</h3>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <form @submit.prevent="addData">
+                        <div class="row">
+                            <div class="col mb-4">
+                                <input v-model="name" type="text" class="form-control form-control-lg" id="name" placeholder="Nama..." required>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col mb-4">
+                                <select v-model="kategori" class="form-select" id="kategori">
+                                    <option disabled value="">Kategori..</option>
+                                    <option>Guru</option>
+                                    <option>Siswa</option>
+                                    <option>Staf</option>
+                                    <option>Umum</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div v-if="kategori == 'Siswa'" class="row ">
+                            <div class="col mb-4">
+                                <select v-model="tingkat" id="tingkat" class="form-select">
+                                    <option disabled value="">Tingkat..</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                            </div>
+                            <div class="col mb-4">
+                                <select v-model="jurusan" id="jurusan" :disabled="!tingkat" class="form-select">
+                                    <option disabled value="">Jurusan..</option>
+                                    <option>PPLG</option>
+                                    <option>TJKT</option>
+                                    <option>TBSM</option>
+                                    <option v-if="!(tingkat==12)">DKV</option>
+                                    <option v-if="!(tingkat==12)">TOI</option>
+                                </select>
+                            </div>
+                            <div class="col mb-4">
+                                <select v-model="kelas" id="kelas" :disabled="!jurusan || jurusan=='TOI'" class="form-select">
+                                    <option disabled value="">Kelas..</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option v-if="!(jurusan=='DKV')">3</option>
+                                    <option v-if="!(jurusan=='DKV') && !(tingkat==12)">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-4">
+                                <input v-model="keperluan" type="text" class="form-control form-control-lg" id="keperluan" placeholder="Keperluan..." required>
+                            </div>
+                        </div>
+                        <div class="row float-end">
+                            <button class="btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="col d-flex justify-content-center">
-                <form @submit.prevent="addData">
-                    <div class="row">
-                        <div class="col mb-4">
-                            <input v-model="name" type="text" class="form-control form-control-lg" id="name" placeholder="Nama..." required>
-                        </div>
-                    </div>
-                    <div class="row" >
-                        <div class="col mb-4">
-                            <select v-model="kategori" class="form-select" id="kategori">
-                                <option disabled value="">Kategori..</option>
-                                <option>Guru</option>
-                                <option>Siswa</option>
-                                <option>Staf</option>
-                                <option>Umum</option>
-                            </select>                
-                        </div>
-                    </div>
-                    <div v-if="kategori == 'Siswa'" class="row ">
-                        <div class="col mb-4">
-                            <select v-model="tingkat" id="tingkat" class="form-select">
-                                <option disabled value="">Tingkat..</option>
-                                <option>10</option>
-                                <option>11</option>
-                                <option>12</option>
-                            </select>
-                        </div>
-                        <div class="col mb-4">
-                            <select v-model="jurusan" id="jurusan" :disabled="!tingkat" class="form-select">
-                                <option disabled value="">Jurusan..</option>
-                                <option>PPLG</option>
-                                <option>TJKT</option>
-                                <option>TBSM</option>
-                                <option v-if="!(tingkat==12)">DKV</option>
-                                <option v-if="!(tingkat==12)">TOI</option>
-                            </select>                
-                        </div>
-                        <div class="col mb-4">
-                            <select v-model="kelas" id="kelas" :disabled="!jurusan || jurusan=='TOI'" class="form-select">
-                                <option disabled value="">Kelas..</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option v-if="!(jurusan=='DKV')">3</option>
-                                <option v-if="!(jurusan=='DKV') && !(tingkat==12)">4</option>
-                            </select>                
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col mb-4">
-                            <input v-model="keperluan" type="text" class="form-control form-control-lg" id="keperluan" placeholder="Keperluan..." required>
-                        </div>
-                    </div>
-                    <div class="row float-end">
-                        <button class="btn">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
         
+        </div>
     </div>
 
     <!--Showing Data Tables-->
     <div class="showData">
         <h1>Riwayat Pengunjung</h1>
         <div class="table-responsive">
-            <div class="m-2">Menampilkan {{ datas.length }} data</div>
+            <div class="text-center fs-4 m-3 ">Menampilkan {{ datas.length }} data</div>
             <table class="table table-responsive">
                 <thead>
                     <tr>
@@ -82,7 +84,7 @@
                         <th class="tanggal">Tanggal</th>
                 </tr>
             </thead>
-            <tbody v-for="(anggota, index) in datas" :key="anggota.id ">
+            <tbody v-for="(anggota, index) in datas" :key="anggota.id " class="">
                 <td>{{ index + 1 }}</td>
                 <td>{{ anggota.nama }}</td>
                 <td>{{ anggota.kategori }}</td>
@@ -150,24 +152,24 @@ async function addData(){
 /* Visitors Style */
 .content {
     background-color: #a58c39;
-    width: 100vw;
+    width: 100%;
     padding: 300px 0;
 }
 
 h3 {
     position: relative;
-    text-shadow: 0px 4px 4px rgba(58, 54, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(32, 30, 0, 0.25);
     font-family: 'Jomhuria', serif;
-    font-size: 100px;
-    line-height: 60px; 
+    font-size: 140px;
+    line-height: 90px; 
     letter-spacing: 7px;
     overflow: hidden;
     background: linear-gradient(90deg, #7d6f24, #f6ff00, #EFDE79);
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 90%;
     background-clip: text;
     /* font-weight: 80px; */
-    animation: animate 3.8s linear infinite;
+    animation: animate 4s linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(94, 86, 36, 0);
 }
@@ -222,7 +224,7 @@ form {
     font-family: 'Chau Philomene One', sans-serif;
 }
 #kelas {
-    width: 80px;
+    width: 100px;
     height: 50px;
     font-size: 20px;
     background-color: #fff9c2;
@@ -232,7 +234,7 @@ form {
     font-family: 'Chau Philomene One', sans-serif;
 }
 #tingkat {
-    width: 80px;
+    width: 120px;
     height: 50px;
     font-size: 20px;
     background-color: #fff9c2;
@@ -242,7 +244,7 @@ form {
     font-family: 'Chau Philomene One', sans-serif;
 }
 #jurusan {
-    width: 150px;
+    width: 130px;
     height: 50px;
     font-size: 20px;
     background-color: #fff9c2;
@@ -269,7 +271,7 @@ form {
     background-color: #483800ec;
     display: flex;
     flex-direction: column;
-    padding: 60px 5px 5px 0px;
+    padding: 100px 50px 50px;
 }
 
 .table-responsive{
@@ -283,27 +285,27 @@ thead {
     border: 2px solid #A59663;
     color: #655602;
     height: 50px;
-    font-size: 23px;
+    font-size: 28px;
     background-color: #ecdf87;
 }
 
 
 tbody {
     border: 1px solid;
-    font-size: 20px;
+    font-size: 25px;
 }
 h1{
     position: relative;
-    text-shadow: 0px 4px 4px rgba(255, 246, 121, 0.25);
+    text-shadow: 0px 4px 4px rgba(255, 242, 59, 0.363);
     font-family: 'Jomhuria', serif;
     text-align: center;
-    font-size: 80px;
-    line-height: 53px; 
+    font-size: 100px;
+    line-height: 65px; 
     letter-spacing: 10px;
     overflow: hidden;
-    background: linear-gradient(85deg, #685b11, #f6ff00, #ffef96);
+    background: linear-gradient(90deg, #685b11, #f6ff00, #ffef96);
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 90%;
     background-clip: text;
     animation: animate 4s linear infinite;
     -webkit-background-clip: text;
@@ -321,66 +323,94 @@ h1{
 /* End History Style */
 
 /* Style For Mobile Screen */
+@media (max-width=450px) {
+    .btn {
+    width: 100px;
+    height: 35px;
+    color: #000000;
+    background-color: #feffd3;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 50px;
+    border-style: hidden; 
+    transform: rotate(-0.800deg);
+    font-family: 'Chau Philomene One', sans-serif;
+    transition: background-color ,color ,1s ease ;
+    }
 
+    .btn:hover{
+        background-color: #655602 ;
+        color: #ffffff;
+    }
+    .content{
+        background-color: #a58c39;
+        width: 100%;
+    }
     #name {
-    width: 20rem;
-    height: 50px;
-    font-size: 20px;
-    background-color: #fff9c2;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 50px;
-    border-style: hidden;
-    font-family: 'Chau Philomene One', sans-serif;
+        width: 10rem;
+        height: 50px;
+        font-size: 20px;
+        background-color: #fff9c2;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 50px;
+        border-style: hidden;
+        font-family: 'Chau Philomene One', sans-serif;
+    }
+    #kategori {
+        width: 15rem;
+        height: 50px;
+        font-size: 20px;
+        background-color: #fff9c2;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 50px;
+        border-style: hidden;
+        font-family: 'Chau Philomene One', sans-serif;
+    }
+    #kelas {
+        width: 90px;
+        height: 50px;
+        font-size: 20px;
+        background-color: #fff9c2;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 50px;
+        border-style: hidden;
+        font-family: 'Chau Philomene One', sans-serif;
+    }
+    #tingkat {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        background-color: #fff9c2;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 50px;
+        border-style: hidden;
+        font-family: 'Chau Philomene One', sans-serif;
+    }
+    #jurusan {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        background-color: #fff9c2;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 50px;
+        border-style: hidden;
+        font-family: 'Chau Philomene One', sans-serif;
+    }
+    #keperluan {
+        width: 20rem;
+        height: 50px;
+        font-size: 20px;
+        padding-left: 15px;
+        background-color: #fff9c2;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 50px;
+        border-style: hidden;
+        font-family: 'Chau Philomene One', sans-serif;
+    }
+    .showData {
+    background-color: #483800ec;
+    display: flex;
+    flex-direction: column;
 }
-#kategori {
-    width: 20rem;
-    height: 50px;
-    font-size: 20px;
-    background-color: #fff9c2;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 50px;
-    border-style: hidden;
-    font-family: 'Chau Philomene One', sans-serif;
 }
-#kelas {
-    width: 90px;
-    height: 50px;
-    font-size: 20px;
-    background-color: #fff9c2;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 50px;
-    border-style: hidden;
-    font-family: 'Chau Philomene One', sans-serif;
-}
-#tingkat {
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
-    background-color: #fff9c2;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 50px;
-    border-style: hidden;
-    font-family: 'Chau Philomene One', sans-serif;
-}
-#jurusan {
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
-    background-color: #fff9c2;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 50px;
-    border-style: hidden;
-    font-family: 'Chau Philomene One', sans-serif;
-}
-#keperluan {
-    width: 20rem;
-    height: 50px;
-    font-size: 20px;
-    padding-left: 15px;
-    background-color: #fff9c2;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 50px;
-    border-style: hidden;
-    font-family: 'Chau Philomene One', sans-serif;
-}
+
 </style>
