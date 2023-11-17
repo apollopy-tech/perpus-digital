@@ -70,7 +70,7 @@
 
     <!--Showing Data Tables-->
     <div class="showData">
-        <h1>Riwayat Pengunjung</h1>
+        <h1>Riwayat<br>Pengunjung</h1>
         <div class="table-responsive">
             <div class="text-center fs-4 m-3 ">Menampilkan {{ datas.length }} data</div>
             <table class="table table-responsive">
