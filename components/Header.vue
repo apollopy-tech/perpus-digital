@@ -22,7 +22,7 @@ margin: 0;
 z-index: 1;
 }
 .nav-container {
-    background-color:#413304;
+    background-color:#371502;
     width: 100%;
     height: 170px;
     display: flex;
@@ -36,11 +36,13 @@ z-index: 1;
 .company {
     width: 257.178px;
     height: 90px;
+    margin: 0 10px;
 }
 
 .smk{
     width: 111.077px;
     height: 126px;
+    margin: 0 30px;
 
 }
 h1 {
@@ -66,7 +68,7 @@ h4{
 
 @media (max-width: 520px) {
     .nav-container {
-        background-color:#413304;
+        background-color:#371502;
         width: 100%;
         height: 80px;
         display: flex;
@@ -112,7 +114,7 @@ h4{
 }
 @media (max-width: 820px) {
     .nav-container {
-        background-color:#413304;
+        background-color:#371502;
         width: 100%;
         height: 130px;
         display: flex;
@@ -130,14 +132,15 @@ h4{
     }
     .smk{
         width: 80.077px;
-        height: 80px;
+        height: 90px;
     
     }
     h1 {
         color: #EFDE79;
         text-align: center;
         line-height: 40px;
-        font-size: 45px;
+        font-size: 60px;
+        font-weight: 50px;
         letter-spacing: 4px;
         font-style: 'bold';
         font-family: 'Jomhuria', serif;
@@ -148,7 +151,7 @@ h4{
         color: #fff9c2;
         text-align: center;
         font-family: 'Chau Philomene One', sans-serif;
-        font-size: 13px;
+        font-size: 20px;
         letter-spacing: 2px;
         font-style: 'bold';
         font-weight: 60;
@@ -157,7 +160,7 @@ h4{
 }
 @media (max-width: 450px) {
     .nav-container {
-        background-color:#413304;
+        background-color:#371502;
         width: 100%;
         height: 100px;
         display: flex;
